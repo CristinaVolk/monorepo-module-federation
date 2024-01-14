@@ -1,12 +1,11 @@
-import  {memo} from 'react';
-import {Link, Outlet} from "react-router-dom";
 import {shopRoutes} from "@packages/shared/src/routes/shop";
+import {Link, Outlet} from "react-router-dom";
 
 interface AppProps {
 	className?: string;
 }
 
-export const App = memo((props: AppProps) => {
+export const App = (props: AppProps) => {
 	const {className} = props;
 
 	return (
@@ -16,5 +15,5 @@ export const App = memo((props: AppProps) => {
 			<Outlet />
 		</div>
 	);
-})
+}
 
